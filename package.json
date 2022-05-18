@@ -1,0 +1,23 @@
+{
+  "name": "uni-shop",
+  "version": "1.0.0",
+  "description": "小程序学习练手~",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valcosmos/uni-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valcosmos/uni-shop/issues"
+  },
+  "homepage": "https://github.com/valcosmos/uni-shop#readme",
+  "dependencies": {
+    "@escook/request-miniprogram": "^0.2.1"
+  }
+}
