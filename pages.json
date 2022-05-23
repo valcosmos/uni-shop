@@ -35,12 +35,21 @@
 			"root": "subpkg",
 			"pages": [
 				{
-					"path": "good_detail/good_detail",
+					"path": "goods_detail/goods_detail",
 					"style": {
 						
 					}
 				}
-			]
+			    ,{
+                    "path" : "goods_list/goods_list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 		}
 	],
 	"globalStyle": {

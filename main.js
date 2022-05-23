@@ -20,8 +20,18 @@ $http.beforeRequest = function(options) {
 }
 
 // 响应拦截器
-$http.afterRequest = function(){
+$http.afterRequest = function() {
 	uni.hideLoading()
+}
+
+// 封装弹窗
+
+uni.$showMsg = function(title = '数据请求失败', duration = 1500) {
+	uni.showToast({
+		title,
+		duration,
+		icon: 'none'
+	})
 }
 
 Vue.config.productionTip = false
