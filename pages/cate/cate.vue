@@ -1,10 +1,14 @@
 <template>
 	<view>
+
+		<!-- 使用自定义的搜索组件 -->
+		<my-search @click="gotoSearch"></my-search>
+
 		<view class="scroll-view-container">
 
 			<!-- 左侧滑动区域 -->
 			<scroll-view class="left-scroll-view" scroll-y="true" :style="{height:wh+'px'}">
-				<block v-for="(item, i) in cateList">
+				<block v-for="(item, i) in cateList" :key="i">
 
 					<view :class="['left-scroll-view-item', i===active?'active':'']" @click="activeChanged(i)">
 						{{item.cat_name}}
@@ -49,7 +53,7 @@
 		onLoad() {
 			const sysInfo = uni.getSystemInfoSync()
 			console.log(sysInfo)
-			this.wh = sysInfo.windowHeight
+			this.wh = sysInfo.windowHeight - 50
 			this.getCateList()
 		},
 		methods: {
@@ -72,6 +76,11 @@
 				console.log(item)
 				uni.navigateTo({
 					url: '/subpkg/goods_list/goods_list?cid=' + item.cat_id
+				})
+			},
+			gotoSearch() {
+				uni.navigateTo({
+					url: '/subpkg/search/search'
 				})
 			}
 		}
